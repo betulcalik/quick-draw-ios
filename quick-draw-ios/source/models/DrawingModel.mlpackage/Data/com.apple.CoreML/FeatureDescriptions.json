@@ -1,0 +1,18 @@
+{
+  "Outputs" : {
+    "label" : {
+      "MLFeatureShortDescription" : "drawing classifier class label of top prediction"
+    },
+    "labelProbability" : {
+      "MLFeatureShortDescription" : "drawing classifier prediction probabilities"
+    }
+  },
+  "Inputs" : {
+    "drawing" : {
+      "MLFeatureShortDescription" : "Input image"
+    }
+  },
+  "TrainingInputs" : {
+
+  }
+}

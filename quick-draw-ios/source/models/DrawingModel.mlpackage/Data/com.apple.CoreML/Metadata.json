@@ -1,0 +1,16 @@
+{
+  "MLModelVersionStringKey" : "1.0",
+  "MLModelDescriptionKey" : "Drawing classifier created by Turi Create (version 6.4.1)",
+  "MLModelCreatorDefinedKey" : {
+    "target" : "label",
+    "com.github.apple.os.platform" : "Linux-5.4.144+-x86_64-with-Ubuntu-18.04-bionic",
+    "max_iterations" : "50",
+    "com.github.apple.turicreate.version" : "6.4.1",
+    "version" : "2",
+    "type" : "drawing_classifier",
+    "warm_start" : "quickdraw_245_v0",
+    "feature" : "drawing"
+  },
+  "MLModelAuthorKey" : "Betül Çalık",
+  "MLModelLicenseKey" : "MIT"
+}
