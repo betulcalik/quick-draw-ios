@@ -20,6 +20,7 @@
 		620A5D5927A70B2C004E45F9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A5D5827A70B2C004E45F9 /* HomePresenter.swift */; };
 		620A5D5B27A70B3B004E45F9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A5D5A27A70B3B004E45F9 /* HomeRouter.swift */; };
 		623EC39427A96EED007D9937 /* DrawingModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39327A96EED007D9937 /* DrawingModel.mlpackage */; };
+		623EC39727A96FA9007D9937 /* Training_Drawn_Recognition_Model.ipynb in Resources */ = {isa = PBXBuildFile; fileRef = 623EC39627A96FA9007D9937 /* Training_Drawn_Recognition_Model.ipynb */; };
 		62DA4EE327A85EE50041C54D /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */; };
 		62DA4EE527A85EEE0041C54D /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */; };
 		62DA4EE727A85EF60041C54D /* Sticky-Notes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */; };
@@ -41,6 +42,7 @@
 		620A5D5827A70B2C004E45F9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		620A5D5A27A70B3B004E45F9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		623EC39327A96EED007D9937 /* DrawingModel.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = DrawingModel.mlpackage; sourceTree = "<group>"; };
+		623EC39627A96FA9007D9937 /* Training_Drawn_Recognition_Model.ipynb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Training_Drawn_Recognition_Model.ipynb; sourceTree = "<group>"; };
 		62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
 		62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sticky-Notes.ttf"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		620A5D3A27A6F013004E45F9 /* supporting-files */ = {
 			isa = PBXGroup;
 			children = (
+				623EC39527A96F98007D9937 /* notebook */,
 				620A5D3227A6DBB6004E45F9 /* Info.plist */,
 				620A5D2F27A6DBB6004E45F9 /* LaunchScreen.storyboard */,
 			);
@@ -167,6 +170,14 @@
 				620A5D4E27A70664004E45F9 /* RoundedButton.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		623EC39527A96F98007D9937 /* notebook */ = {
+			isa = PBXGroup;
+			children = (
+				623EC39627A96FA9007D9937 /* Training_Drawn_Recognition_Model.ipynb */,
+			);
+			path = notebook;
 			sourceTree = "<group>";
 		};
 		62DA4ED927A85C7E0041C54D /* models */ = {
@@ -238,6 +249,7 @@
 				620A5D3127A6DBB6004E45F9 /* LaunchScreen.storyboard in Resources */,
 				62DA4EE527A85EEE0041C54D /* Lora-Bold.ttf in Resources */,
 				62DA4EE727A85EF60041C54D /* Sticky-Notes.ttf in Resources */,
+				623EC39727A96FA9007D9937 /* Training_Drawn_Recognition_Model.ipynb in Resources */,
 				62DA4EE327A85EE50041C54D /* Lora-Regular.ttf in Resources */,
 				620A5D2E27A6DBB6004E45F9 /* Assets.xcassets in Resources */,
 			);
