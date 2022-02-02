@@ -52,13 +52,18 @@ class HomeViewController: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateChallange()
+    }
+    
     // MARK: - Setup UI
-    func setupUI() {
+    private func setupUI() {
         view.backgroundColor = Colors.yellow
         addViewsToStackView()
     }
     
-    func addViewsToStackView() {
+    private func addViewsToStackView() {
         contentStackView.addArrangedSubview(drawLabel)
         contentStackView.addArrangedSubview(challengeLabel)
         contentStackView.addArrangedSubview(startButton)
@@ -68,6 +73,10 @@ class HomeViewController: UIViewController {
             contentStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             contentStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    }
+    
+    private func updateChallange() {
+        challengeLabel.text = Categories.getRandom
     }
     
     // MARK: - Actions

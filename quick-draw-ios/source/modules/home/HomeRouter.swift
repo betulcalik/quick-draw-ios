@@ -20,7 +20,10 @@ class HomeRouter: HomeRouterProtocol {
     }
     
     func navigateToTodo(on view: HomeViewProtocol) {
+        let todoVC = TodoRouter.build()
+        guard let homeVC = view as? HomeViewController else { return }
         
+        homeVC.navigationController?.pushViewController(todoVC, animated: true)
     }
 
 }
