@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // MARK: - Components
     private lazy var drawLabel: UILabel = {
         let label = UILabel()
         label.text = "Draw"
@@ -51,6 +52,7 @@ class HomeViewController: UIViewController {
         setupUI()
     }
     
+    // MARK: - Setup UI
     func setupUI() {
         view.backgroundColor = Colors.yellow
         addViewsToStackView()
