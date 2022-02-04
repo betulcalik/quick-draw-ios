@@ -61,6 +61,7 @@ class HomeViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = Colors.yellow
         addViewsToStackView()
+        addConstraints()
     }
     
     private func addViewsToStackView() {
@@ -68,7 +69,9 @@ class HomeViewController: UIViewController {
         contentStackView.addArrangedSubview(challengeLabel)
         contentStackView.addArrangedSubview(startButton)
         view.addSubview(contentStackView)
-        
+    }
+    
+    private func addConstraints() {
         NSLayoutConstraint.activate([
             contentStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             contentStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)

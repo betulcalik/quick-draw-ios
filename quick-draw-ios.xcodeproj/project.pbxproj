@@ -26,6 +26,7 @@
 		623EC39E27AABFD3007D9937 /* TodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39D27AABFD3007D9937 /* TodoPresenter.swift */; };
 		623EC3A027AABFDE007D9937 /* TodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39F27AABFDE007D9937 /* TodoRouter.swift */; };
 		623EC3A227AAC008007D9937 /* TodoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC3A127AAC008007D9937 /* TodoInteractor.swift */; };
+		62B9B06527AC69630022C8E3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B9B06427AC69630022C8E3 /* CanvasView.swift */; };
 		62DA4EE327A85EE50041C54D /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */; };
 		62DA4EE527A85EEE0041C54D /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */; };
 		62DA4EE727A85EF60041C54D /* Sticky-Notes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */; };
@@ -53,6 +54,7 @@
 		623EC39D27AABFD3007D9937 /* TodoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPresenter.swift; sourceTree = "<group>"; };
 		623EC39F27AABFDE007D9937 /* TodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRouter.swift; sourceTree = "<group>"; };
 		623EC3A127AAC008007D9937 /* TodoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoInteractor.swift; sourceTree = "<group>"; };
+		62B9B06427AC69630022C8E3 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
 		62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sticky-Notes.ttf"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				620A5D4E27A70664004E45F9 /* RoundedButton.swift */,
+				62B9B06427AC69630022C8E3 /* CanvasView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				623EC39A27AABFA4007D9937 /* TodoProtocols.swift in Sources */,
 				623EC39427A96EED007D9937 /* DrawingModel.mlpackage in Sources */,
 				620A5D5B27A70B3B004E45F9 /* HomeRouter.swift in Sources */,
+				62B9B06527AC69630022C8E3 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
