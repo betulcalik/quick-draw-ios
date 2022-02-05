@@ -84,13 +84,13 @@ class HomeViewController: UIViewController {
     
     // MARK: - Actions
     @objc func gotItAction() {
-        navigateToTodo()
+        pushToDrawing()
     }
 }
 
 // MARK: - Home View Protocol
 extension HomeViewController: HomeViewProtocol {
-    func navigateToTodo() {
-        presenter?.navigateToTodo()
+    func pushToDrawing() {
+        presenter?.pushToDrawing()
     }
 }

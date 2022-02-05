@@ -19,8 +19,9 @@ class HomePresenter: HomePresenterProtocol {
         self.router = router
     }
     
-    func navigateToTodo() {
-        router.navigateToTodo(on: view!)
+    func pushToDrawing() {
+        guard let view = view else { return }
+        router.pushToDrawing(on: view)
     }
     
 }

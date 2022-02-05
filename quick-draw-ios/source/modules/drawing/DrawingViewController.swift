@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodoViewController: UIViewController {
+class DrawingViewController: UIViewController {
 
     // MARK: - Components
     private lazy var guessLabel: UILabel = {
@@ -64,7 +64,7 @@ class TodoViewController: UIViewController {
     }()
     
     // MARK: - Variables
-    var presenter: TodoPresenterProtocol?
+    var presenter: DrawingPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,6 +123,6 @@ class TodoViewController: UIViewController {
 }
 
 // MARK : - Todo View Protocol
-extension TodoViewController: TodoViewProtocol {
+extension DrawingViewController: DrawingViewProtocol {
     
 }

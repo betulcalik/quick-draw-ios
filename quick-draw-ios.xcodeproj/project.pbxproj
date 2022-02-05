@@ -21,11 +21,11 @@
 		620A5D5B27A70B3B004E45F9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A5D5A27A70B3B004E45F9 /* HomeRouter.swift */; };
 		623EC39427A96EED007D9937 /* DrawingModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39327A96EED007D9937 /* DrawingModel.mlpackage */; };
 		623EC39727A96FA9007D9937 /* Training_Drawn_Recognition_Model.ipynb in Resources */ = {isa = PBXBuildFile; fileRef = 623EC39627A96FA9007D9937 /* Training_Drawn_Recognition_Model.ipynb */; };
-		623EC39A27AABFA4007D9937 /* TodoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39927AABFA4007D9937 /* TodoProtocols.swift */; };
-		623EC39C27AABFBF007D9937 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39B27AABFBF007D9937 /* TodoViewController.swift */; };
-		623EC39E27AABFD3007D9937 /* TodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39D27AABFD3007D9937 /* TodoPresenter.swift */; };
-		623EC3A027AABFDE007D9937 /* TodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39F27AABFDE007D9937 /* TodoRouter.swift */; };
-		623EC3A227AAC008007D9937 /* TodoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC3A127AAC008007D9937 /* TodoInteractor.swift */; };
+		623EC39A27AABFA4007D9937 /* DrawingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39927AABFA4007D9937 /* DrawingProtocols.swift */; };
+		623EC39C27AABFBF007D9937 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39B27AABFBF007D9937 /* DrawingViewController.swift */; };
+		623EC39E27AABFD3007D9937 /* DrawingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39D27AABFD3007D9937 /* DrawingPresenter.swift */; };
+		623EC3A027AABFDE007D9937 /* DrawingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39F27AABFDE007D9937 /* DrawingRouter.swift */; };
+		623EC3A227AAC008007D9937 /* DrawingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC3A127AAC008007D9937 /* DrawingInteractor.swift */; };
 		62B9B06527AC69630022C8E3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B9B06427AC69630022C8E3 /* CanvasView.swift */; };
 		62DA4EE327A85EE50041C54D /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */; };
 		62DA4EE527A85EEE0041C54D /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */; };
@@ -49,11 +49,11 @@
 		620A5D5A27A70B3B004E45F9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		623EC39327A96EED007D9937 /* DrawingModel.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = DrawingModel.mlpackage; sourceTree = "<group>"; };
 		623EC39627A96FA9007D9937 /* Training_Drawn_Recognition_Model.ipynb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Training_Drawn_Recognition_Model.ipynb; sourceTree = "<group>"; };
-		623EC39927AABFA4007D9937 /* TodoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoProtocols.swift; sourceTree = "<group>"; };
-		623EC39B27AABFBF007D9937 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
-		623EC39D27AABFD3007D9937 /* TodoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPresenter.swift; sourceTree = "<group>"; };
-		623EC39F27AABFDE007D9937 /* TodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRouter.swift; sourceTree = "<group>"; };
-		623EC3A127AAC008007D9937 /* TodoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoInteractor.swift; sourceTree = "<group>"; };
+		623EC39927AABFA4007D9937 /* DrawingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingProtocols.swift; sourceTree = "<group>"; };
+		623EC39B27AABFBF007D9937 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		623EC39D27AABFD3007D9937 /* DrawingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPresenter.swift; sourceTree = "<group>"; };
+		623EC39F27AABFDE007D9937 /* DrawingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingRouter.swift; sourceTree = "<group>"; };
+		623EC3A127AAC008007D9937 /* DrawingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingInteractor.swift; sourceTree = "<group>"; };
 		62B9B06427AC69630022C8E3 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				620A5D3C27A6F040004E45F9 /* home */,
-				623EC39827AABF90007D9937 /* todo */,
+				623EC39827AABF90007D9937 /* drawing */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -194,16 +194,16 @@
 			path = notebook;
 			sourceTree = "<group>";
 		};
-		623EC39827AABF90007D9937 /* todo */ = {
+		623EC39827AABF90007D9937 /* drawing */ = {
 			isa = PBXGroup;
 			children = (
-				623EC39927AABFA4007D9937 /* TodoProtocols.swift */,
-				623EC39B27AABFBF007D9937 /* TodoViewController.swift */,
-				623EC3A127AAC008007D9937 /* TodoInteractor.swift */,
-				623EC39D27AABFD3007D9937 /* TodoPresenter.swift */,
-				623EC39F27AABFDE007D9937 /* TodoRouter.swift */,
+				623EC39927AABFA4007D9937 /* DrawingProtocols.swift */,
+				623EC39B27AABFBF007D9937 /* DrawingViewController.swift */,
+				623EC3A127AAC008007D9937 /* DrawingInteractor.swift */,
+				623EC39D27AABFD3007D9937 /* DrawingPresenter.swift */,
+				623EC39F27AABFDE007D9937 /* DrawingRouter.swift */,
 			);
-			path = todo;
+			path = drawing;
 			sourceTree = "<group>";
 		};
 		62DA4ED927A85C7E0041C54D /* models */ = {
@@ -288,20 +288,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				623EC3A227AAC008007D9937 /* TodoInteractor.swift in Sources */,
+				623EC3A227AAC008007D9937 /* DrawingInteractor.swift in Sources */,
 				620A5D2927A6DBB5004E45F9 /* HomeViewController.swift in Sources */,
 				620A5D5527A70B14004E45F9 /* HomeEntity.swift in Sources */,
 				620A5D4F27A70664004E45F9 /* RoundedButton.swift in Sources */,
 				620A5D5927A70B2C004E45F9 /* HomePresenter.swift in Sources */,
 				620A5D4A27A6FD95004E45F9 /* Fonts.swift in Sources */,
 				620A5D4027A6F811004E45F9 /* Colors.swift in Sources */,
-				623EC3A027AABFDE007D9937 /* TodoRouter.swift in Sources */,
-				623EC39C27AABFBF007D9937 /* TodoViewController.swift in Sources */,
+				623EC3A027AABFDE007D9937 /* DrawingRouter.swift in Sources */,
+				623EC39C27AABFBF007D9937 /* DrawingViewController.swift in Sources */,
 				620A5D5327A70B09004E45F9 /* HomeProtocols.swift in Sources */,
 				620A5D2527A6DBB5004E45F9 /* AppDelegate.swift in Sources */,
 				620A5D2727A6DBB5004E45F9 /* SceneDelegate.swift in Sources */,
-				623EC39E27AABFD3007D9937 /* TodoPresenter.swift in Sources */,
-				623EC39A27AABFA4007D9937 /* TodoProtocols.swift in Sources */,
+				623EC39E27AABFD3007D9937 /* DrawingPresenter.swift in Sources */,
+				623EC39A27AABFA4007D9937 /* DrawingProtocols.swift in Sources */,
 				623EC39427A96EED007D9937 /* DrawingModel.mlpackage in Sources */,
 				620A5D5B27A70B3B004E45F9 /* HomeRouter.swift in Sources */,
 				62B9B06527AC69630022C8E3 /* CanvasView.swift in Sources */,

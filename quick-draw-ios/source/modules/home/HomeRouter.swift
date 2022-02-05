@@ -19,11 +19,11 @@ class HomeRouter: HomeRouterProtocol {
         return view
     }
     
-    func navigateToTodo(on view: HomeViewProtocol) {
-        let todoVC = TodoRouter.build()
+    func pushToDrawing(on view: HomeViewProtocol) {
+        let drawingVC = DrawingRouter.build()
         guard let homeVC = view as? HomeViewController else { return }
         
-        homeVC.navigationController?.pushViewController(todoVC, animated: true)
+        homeVC.navigationController?.pushViewController(drawingVC, animated: true)
     }
 
 }

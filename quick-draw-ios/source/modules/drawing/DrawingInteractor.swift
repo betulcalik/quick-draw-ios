@@ -7,6 +7,6 @@
 
 import Foundation
 
-class TodoInteractor: TodoInteractorProtocol {
+class DrawingInteractor: DrawingInteractorProtocol {
     
 }

@@ -10,16 +10,16 @@ import Foundation
 // MARK : - View
 protocol HomeViewProtocol: AnyObject {
     var presenter: HomePresenterProtocol? { get set }
-    func navigateToTodo()
+    func pushToDrawing()
 }
 
 // MARK: - Presenter
 protocol HomePresenterProtocol: AnyObject {
-    func navigateToTodo()
+    func pushToDrawing()
 }
 
 // MARK: - Router
 protocol HomeRouterProtocol: AnyObject {
     static func build() -> HomeViewController
-    func navigateToTodo(on view: HomeViewProtocol)
+    func pushToDrawing(on view: HomeViewProtocol)
 }
