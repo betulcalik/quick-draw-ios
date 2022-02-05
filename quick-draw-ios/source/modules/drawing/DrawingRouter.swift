@@ -9,12 +9,14 @@ import Foundation
 
 class DrawingRouter: DrawingRouterProtocol {
     
-    static func build() -> DrawingViewController {
+    static func build(with category: String) -> DrawingViewController {
         let view = DrawingViewController()
         let router: DrawingRouterProtocol = DrawingRouter()
         let interactor: DrawingInteractorProtocol = DrawingInteractor()
-        let presenter: DrawingPresenterProtocol = DrawingPresenter(view: view, interactor: interactor, router: router)
-        
+        let presenter: DrawingPresenterProtocol = DrawingPresenter(view: view,
+                                                                   interactor: interactor,
+                                                                   router: router,
+                                                                   category: category)
         view.presenter = presenter
         
         return view

@@ -13,12 +13,19 @@ class DrawingPresenter: DrawingPresenterProtocol {
     weak var view: DrawingViewProtocol?
     private let interactor: DrawingInteractorProtocol
     private let router: DrawingRouterProtocol
+    private let category: String
     
     init(view: DrawingViewProtocol,
          interactor: DrawingInteractorProtocol,
-         router: DrawingRouterProtocol) {
+         router: DrawingRouterProtocol,
+         category: String) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        self.category = category
+    }
+    
+    func getCategory() -> String {
+        return category
     }
 }

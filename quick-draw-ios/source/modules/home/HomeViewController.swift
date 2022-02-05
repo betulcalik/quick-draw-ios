@@ -53,10 +53,11 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateChallange()
+        super.viewWillAppear(true)
+        updateCategory()
+        setCategory()
     }
-    
+
     // MARK: - Setup UI
     private func setupUI() {
         view.backgroundColor = Colors.yellow
@@ -77,11 +78,7 @@ class HomeViewController: UIViewController {
             contentStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
-    
-    private func updateChallange() {
-        challengeLabel.text = Categories.getRandom
-    }
-    
+
     // MARK: - Actions
     @objc func gotItAction() {
         pushToDrawing()
@@ -90,6 +87,15 @@ class HomeViewController: UIViewController {
 
 // MARK: - Home View Protocol
 extension HomeViewController: HomeViewProtocol {
+    func setCategory() {
+        guard let category = challengeLabel.text else { return }
+        presenter?.setCategory(category: category)
+    }
+    
+    func updateCategory() {
+        challengeLabel.text = Categories.getRandom
+    }
+    
     func pushToDrawing() {
         presenter?.pushToDrawing()
     }

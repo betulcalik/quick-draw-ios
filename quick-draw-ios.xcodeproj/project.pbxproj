@@ -30,9 +30,12 @@
 		62DA4EE327A85EE50041C54D /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */; };
 		62DA4EE527A85EEE0041C54D /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */; };
 		62DA4EE727A85EF60041C54D /* Sticky-Notes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */; };
+		86E05AC328DD916B551F862E /* Pods_quick_draw_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0496FEB79CD136D87394080A /* Pods_quick_draw_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0496FEB79CD136D87394080A /* Pods_quick_draw_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quick_draw_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E76771E4D72E755ECC50157 /* Pods-quick-draw-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quick-draw-ios.debug.xcconfig"; path = "Target Support Files/Pods-quick-draw-ios/Pods-quick-draw-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		620A5D2127A6DBB5004E45F9 /* quick-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		620A5D2427A6DBB5004E45F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		620A5D2627A6DBB5004E45F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
 		62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sticky-Notes.ttf"; sourceTree = "<group>"; };
+		C2B4D1CA55F497927606D3CF /* Pods-quick-draw-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quick-draw-ios.release.xcconfig"; path = "Target Support Files/Pods-quick-draw-ios/Pods-quick-draw-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +69,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E05AC328DD916B551F862E /* Pods_quick_draw_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F343065348159643317C90B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E76771E4D72E755ECC50157 /* Pods-quick-draw-ios.debug.xcconfig */,
+				C2B4D1CA55F497927606D3CF /* Pods-quick-draw-ios.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3430390B2FE3625CE2BEDB8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0496FEB79CD136D87394080A /* Pods_quick_draw_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		620A5D1827A6DBB5004E45F9 = {
 			isa = PBXGroup;
 			children = (
 				620A5D2327A6DBB5004E45F9 /* quick-draw-ios */,
 				620A5D2227A6DBB5004E45F9 /* Products */,
+				1F343065348159643317C90B /* Pods */,
+				3430390B2FE3625CE2BEDB8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 620A5D3527A6DBB6004E45F9 /* Build configuration list for PBXNativeTarget "quick-draw-ios" */;
 			buildPhases = (
+				BE71FFAA96ADB5C189C7A21D /* [CP] Check Pods Manifest.lock */,
 				620A5D1D27A6DBB5004E45F9 /* Sources */,
 				620A5D1E27A6DBB5004E45F9 /* Frameworks */,
 				620A5D1F27A6DBB5004E45F9 /* Resources */,
+				4E7D020BCFFD32E32C0ECF1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +309,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E7D020BCFFD32E32C0ECF1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quick-draw-ios/Pods-quick-draw-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quick-draw-ios/Pods-quick-draw-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quick-draw-ios/Pods-quick-draw-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE71FFAA96ADB5C189C7A21D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quick-draw-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		620A5D1D27A6DBB5004E45F9 /* Sources */ = {
@@ -438,6 +507,7 @@
 		};
 		620A5D3627A6DBB6004E45F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E76771E4D72E755ECC50157 /* Pods-quick-draw-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +534,7 @@
 		};
 		620A5D3727A6DBB6004E45F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2B4D1CA55F497927606D3CF /* Pods-quick-draw-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

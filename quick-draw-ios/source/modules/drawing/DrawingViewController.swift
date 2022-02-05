@@ -6,16 +6,39 @@
 //
 
 import UIKit
+import CountdownLabel
 
 class DrawingViewController: UIViewController {
 
     // MARK: - Components
+    private lazy var countdownLabel: CountdownLabel = {
+        let label = CountdownLabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.animationType = .Anvil
+        label.font = Fonts.loraRegular
+        label.textAlignment = .center
+        label.setCountDownTime(minutes: 60)
+        label.start()
+        return label
+    }()
+    
     private lazy var guessLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "deneme"
-        label.font = Fonts.handwriting
+        label.text = "Waiting..."
+        label.font = Fonts.handwriting?.withSize(27)
+        label.textAlignment = .center
         return label
+    }()
+    
+    private lazy var labelsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.distribution = .fillEqually
+        stackView.spacing = 30
+        return stackView
     }()
     
     private lazy var canvasView: CanvasView = {
@@ -65,6 +88,7 @@ class DrawingViewController: UIViewController {
     
     // MARK: - Variables
     var presenter: DrawingPresenterProtocol?
+    private var category: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,16 +98,24 @@ class DrawingViewController: UIViewController {
     // MARK: - Setup UI
     private func setupUI() {
         view.backgroundColor = Colors.yellow
+        getCategory()
         setLargeTitle()
+        addLabelsToStackView()
         addButtonsToStackView()
         addComponentsToContentStackView()
     }
     
     private func setLargeTitle() {
         navigationItem.setHidesBackButton(true, animated: true)
-        navigationItem.title = "Let's Draw: "
+        navigationItem.title = "Let's Draw: " + (category ?? "")
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func addLabelsToStackView() {
+        labelsStackView.addArrangedSubview(countdownLabel)
+        labelsStackView.addArrangedSubview(guessLabel)
+        view.addSubview(labelsStackView)
     }
     
     private func addButtonsToStackView() {
@@ -93,7 +125,7 @@ class DrawingViewController: UIViewController {
     }
     
     private func addComponentsToContentStackView() {
-        contentStackView.addArrangedSubview(guessLabel)
+        contentStackView.addArrangedSubview(labelsStackView)
         contentStackView.addArrangedSubview(canvasView)
         contentStackView.addArrangedSubview(buttonsStackView)
         view.addSubview(contentStackView)
@@ -102,9 +134,9 @@ class DrawingViewController: UIViewController {
             contentStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             contentStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             contentStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            contentStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            guessLabel.topAnchor.constraint(equalTo: contentStackView.topAnchor),
-            guessLabel.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor),
+            contentStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -35),
+            labelsStackView.topAnchor.constraint(equalTo: contentStackView.topAnchor),
+            labelsStackView.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor),
             canvasView.widthAnchor.constraint(equalTo: contentStackView.widthAnchor),
             buttonsStackView.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor),
             buttonsStackView.bottomAnchor.constraint(equalTo: contentStackView.bottomAnchor)
@@ -124,5 +156,7 @@ class DrawingViewController: UIViewController {
 
 // MARK : - Todo View Protocol
 extension DrawingViewController: DrawingViewProtocol {
-    
+    func getCategory() {
+        category = presenter?.getCategory()
+    }
 }

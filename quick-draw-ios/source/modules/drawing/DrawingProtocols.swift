@@ -10,6 +10,7 @@ import Foundation
 // MARK: - View
 protocol DrawingViewProtocol: AnyObject {
     var presenter: DrawingPresenterProtocol? { get set }
+    func getCategory()
 }
 
 // MARK: - Interactor
@@ -19,10 +20,10 @@ protocol DrawingInteractorProtocol: AnyObject {
 
 // MARK: - Presenter
 protocol DrawingPresenterProtocol: AnyObject {
-    
+    func getCategory() -> String
 }
 
 // MARK: - Router
 protocol DrawingRouterProtocol: AnyObject {
-    static func build() -> DrawingViewController
+    static func build(with category: String) -> DrawingViewController
 }

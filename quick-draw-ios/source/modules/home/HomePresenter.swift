@@ -12,6 +12,7 @@ class HomePresenter: HomePresenterProtocol {
     // MARK: - Variables
     weak var view: HomeViewProtocol?
     private let router: HomeRouterProtocol
+    private var category: String = ""
     
     init(view: HomeViewProtocol,
          router: HomeRouterProtocol) {
@@ -19,9 +20,13 @@ class HomePresenter: HomePresenterProtocol {
         self.router = router
     }
     
+    func setCategory(category: String) {
+        self.category = category
+    }
+
     func pushToDrawing() {
         guard let view = view else { return }
-        router.pushToDrawing(on: view)
+        router.pushToDrawing(on: view, with: category)
     }
     
 }
