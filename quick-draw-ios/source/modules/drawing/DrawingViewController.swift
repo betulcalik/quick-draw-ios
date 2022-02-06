@@ -145,11 +145,11 @@ class DrawingViewController: UIViewController {
     
     // MARK: - Actions
     @objc func clearButtonAction() {
-        print("clear")
+        canvasView.clearCanvas()
     }
     
     @objc func nextButtonAction() {
-        print("next")
+        presenter?.pushToHome()
     }
 
 }

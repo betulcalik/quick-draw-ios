@@ -27,6 +27,7 @@ class CanvasView: UIView {
             }
         }
         context.strokePath()
+        updateLayoutProperties()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -40,4 +41,20 @@ class CanvasView: UIView {
         lines.append(lastLine)
         setNeedsDisplay()
     }
+    
+    private func updateLayoutProperties() {
+        layer.masksToBounds = false
+        layer.cornerRadius = 20
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 2, height: 2)
+        layer.shouldRasterize = true
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 0.6
+    }
+    
+    func clearCanvas() {
+        lines.removeAll()
+        setNeedsDisplay()
+    }
+    
 }

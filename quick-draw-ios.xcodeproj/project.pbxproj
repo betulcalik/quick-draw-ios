@@ -82,7 +82,6 @@
 				5E76771E4D72E755ECC50157 /* Pods-quick-draw-ios.debug.xcconfig */,
 				C2B4D1CA55F497927606D3CF /* Pods-quick-draw-ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

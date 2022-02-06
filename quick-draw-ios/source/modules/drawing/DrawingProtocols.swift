@@ -21,9 +21,11 @@ protocol DrawingInteractorProtocol: AnyObject {
 // MARK: - Presenter
 protocol DrawingPresenterProtocol: AnyObject {
     func getCategory() -> String
+    func pushToHome()
 }
 
 // MARK: - Router
 protocol DrawingRouterProtocol: AnyObject {
     static func build(with category: String) -> DrawingViewController
+    func pushToHome(on view: DrawingViewProtocol)
 }

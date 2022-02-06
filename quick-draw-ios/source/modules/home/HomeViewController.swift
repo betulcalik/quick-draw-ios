@@ -60,6 +60,7 @@ class HomeViewController: UIViewController {
 
     // MARK: - Setup UI
     private func setupUI() {
+        navigationItem.setHidesBackButton(true, animated: true)
         view.backgroundColor = Colors.yellow
         addViewsToStackView()
         addConstraints()

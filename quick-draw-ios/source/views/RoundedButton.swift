@@ -20,17 +20,17 @@ class RoundedButton: UIButton {
     }
     
     func setupUI() {
-        self.titleLabel?.font = Fonts.loraRegular
+        titleLabel?.font = Fonts.loraRegular
     }
     
     func updateLayerProperties() {
-        self.layer.masksToBounds = false
-        self.layer.cornerRadius = 7
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 5, height: 5)
-        self.layer.shouldRasterize = true
-        self.layer.shadowRadius = 5
-        self.layer.shadowOpacity = 0.6
+        layer.masksToBounds = false
+        layer.cornerRadius = 20
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 2, height: 2)
+        layer.shouldRasterize = true
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 0.6
     }
     
 }

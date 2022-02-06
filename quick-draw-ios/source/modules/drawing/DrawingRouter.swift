@@ -22,4 +22,11 @@ class DrawingRouter: DrawingRouterProtocol {
         return view
     }
     
+    func pushToHome(on view: DrawingViewProtocol) {
+        let homeVC = HomeRouter.build()
+        guard let drawingVC = view as? DrawingViewController else { return }
+        
+        drawingVC.navigationController?.pushViewController(homeVC, animated: true)
+    }
+    
 }

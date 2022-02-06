@@ -28,4 +28,10 @@ class DrawingPresenter: DrawingPresenterProtocol {
     func getCategory() -> String {
         return category
     }
+    
+    func pushToHome() {
+        guard let view = view else { return }
+        router.pushToHome(on: view)
+    }
+    
 }
