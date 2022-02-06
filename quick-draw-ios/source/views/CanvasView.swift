@@ -42,6 +42,10 @@ class CanvasView: UIView {
         setNeedsDisplay()
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        NotificationCenter.default.post(name: .didTouchesMoved, object: nil)
+    }
+    
     private func updateLayoutProperties() {
         layer.masksToBounds = false
         layer.cornerRadius = 20

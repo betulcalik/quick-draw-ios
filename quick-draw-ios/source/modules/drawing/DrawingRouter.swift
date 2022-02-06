@@ -18,6 +18,7 @@ class DrawingRouter: DrawingRouterProtocol {
                                                                    router: router,
                                                                    category: category)
         view.presenter = presenter
+        interactor.presenter = presenter
         
         return view
     }

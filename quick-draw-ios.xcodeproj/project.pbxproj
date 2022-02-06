@@ -26,10 +26,13 @@
 		623EC39E27AABFD3007D9937 /* DrawingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39D27AABFD3007D9937 /* DrawingPresenter.swift */; };
 		623EC3A027AABFDE007D9937 /* DrawingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC39F27AABFDE007D9937 /* DrawingRouter.swift */; };
 		623EC3A227AAC008007D9937 /* DrawingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC3A127AAC008007D9937 /* DrawingInteractor.swift */; };
+		6299A8D927B04EB500C7993A /* NSNotificationName+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299A8D827B04EB500C7993A /* NSNotificationName+Extensions.swift */; };
 		62B9B06527AC69630022C8E3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B9B06427AC69630022C8E3 /* CanvasView.swift */; };
 		62DA4EE327A85EE50041C54D /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */; };
 		62DA4EE527A85EEE0041C54D /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */; };
 		62DA4EE727A85EF60041C54D /* Sticky-Notes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */; };
+		62DC5EE027AFFBE00096E36B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC5EDF27AFFBE00096E36B /* UIView+Extensions.swift */; };
+		62DC5EE227AFFC150096E36B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC5EE127AFFC150096E36B /* UIImage+Extensions.swift */; };
 		86E05AC328DD916B551F862E /* Pods_quick_draw_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0496FEB79CD136D87394080A /* Pods_quick_draw_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,10 +60,13 @@
 		623EC39D27AABFD3007D9937 /* DrawingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPresenter.swift; sourceTree = "<group>"; };
 		623EC39F27AABFDE007D9937 /* DrawingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingRouter.swift; sourceTree = "<group>"; };
 		623EC3A127AAC008007D9937 /* DrawingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingInteractor.swift; sourceTree = "<group>"; };
+		6299A8D827B04EB500C7993A /* NSNotificationName+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotificationName+Extensions.swift"; sourceTree = "<group>"; };
 		62B9B06427AC69630022C8E3 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
 		62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sticky-Notes.ttf"; sourceTree = "<group>"; };
+		62DC5EDF27AFFBE00096E36B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		62DC5EE127AFFC150096E36B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		C2B4D1CA55F497927606D3CF /* Pods-quick-draw-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quick-draw-ios.release.xcconfig"; path = "Target Support Files/Pods-quick-draw-ios/Pods-quick-draw-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +201,7 @@
 			children = (
 				62DA4ED927A85C7E0041C54D /* models */,
 				620A5D3927A6EFF8004E45F9 /* modules */,
+				62DC5EDE27AFFBAB0096E36B /* extensions */,
 				620A5D4D27A7063F004E45F9 /* views */,
 				620A5D3E27A6F7F5004E45F9 /* utilities */,
 			);
@@ -236,6 +243,16 @@
 				623EC39327A96EED007D9937 /* DrawingModel.mlpackage */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		62DC5EDE27AFFBAB0096E36B /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62DC5EDF27AFFBE00096E36B /* UIView+Extensions.swift */,
+				62DC5EE127AFFC150096E36B /* UIImage+Extensions.swift */,
+				6299A8D827B04EB500C7993A /* NSNotificationName+Extensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +375,7 @@
 			files = (
 				623EC3A227AAC008007D9937 /* DrawingInteractor.swift in Sources */,
 				620A5D2927A6DBB5004E45F9 /* HomeViewController.swift in Sources */,
+				6299A8D927B04EB500C7993A /* NSNotificationName+Extensions.swift in Sources */,
 				620A5D5527A70B14004E45F9 /* HomeEntity.swift in Sources */,
 				620A5D4F27A70664004E45F9 /* RoundedButton.swift in Sources */,
 				620A5D5927A70B2C004E45F9 /* HomePresenter.swift in Sources */,
@@ -368,9 +386,11 @@
 				620A5D5327A70B09004E45F9 /* HomeProtocols.swift in Sources */,
 				620A5D2527A6DBB5004E45F9 /* AppDelegate.swift in Sources */,
 				620A5D2727A6DBB5004E45F9 /* SceneDelegate.swift in Sources */,
+				62DC5EE027AFFBE00096E36B /* UIView+Extensions.swift in Sources */,
 				623EC39E27AABFD3007D9937 /* DrawingPresenter.swift in Sources */,
 				623EC39A27AABFA4007D9937 /* DrawingProtocols.swift in Sources */,
 				623EC39427A96EED007D9937 /* DrawingModel.mlpackage in Sources */,
+				62DC5EE227AFFC150096E36B /* UIImage+Extensions.swift in Sources */,
 				620A5D5B27A70B3B004E45F9 /* HomeRouter.swift in Sources */,
 				62B9B06527AC69630022C8E3 /* CanvasView.swift in Sources */,
 			);

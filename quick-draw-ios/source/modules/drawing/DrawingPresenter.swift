@@ -24,7 +24,15 @@ class DrawingPresenter: DrawingPresenterProtocol {
         self.router = router
         self.category = category
     }
+
+    func classifyDrawing() {
+        interactor.classifyDrawing()
+    }
     
+    func setCanvas() -> CanvasView? {
+        return view?.setCanvas()
+    }
+
     func getCategory() -> String {
         return category
     }

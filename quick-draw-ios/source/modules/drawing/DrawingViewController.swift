@@ -99,10 +99,15 @@ class DrawingViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = Colors.yellow
         getCategory()
+        setObservers()
         setLargeTitle()
         addLabelsToStackView()
         addButtonsToStackView()
         addComponentsToContentStackView()
+    }
+    
+    private func setObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didTouchesMoved), name: .didTouchesMoved, object: nil)
     }
     
     private func setLargeTitle() {
@@ -152,10 +157,17 @@ class DrawingViewController: UIViewController {
         presenter?.pushToHome()
     }
 
+    @objc func didTouchesMoved() {
+        presenter?.classifyDrawing()
+    }
 }
 
 // MARK : - Todo View Protocol
 extension DrawingViewController: DrawingViewProtocol {
+    func setCanvas() -> CanvasView {
+        return canvasView
+    }
+    
     func getCategory() {
         category = presenter?.getCategory()
     }
