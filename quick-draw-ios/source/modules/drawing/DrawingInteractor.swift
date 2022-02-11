@@ -35,6 +35,7 @@ class DrawingInteractor: DrawingInteractorProtocol {
         }
 
         outputLabel = output.label
+        SpeechManager.shared.speech(text: outputLabel ?? "")
     }
     
     func getPrediction() -> String {

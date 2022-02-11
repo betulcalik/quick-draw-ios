@@ -28,6 +28,7 @@
 		623EC3A227AAC008007D9937 /* DrawingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EC3A127AAC008007D9937 /* DrawingInteractor.swift */; };
 		6299A8D927B04EB500C7993A /* NSNotificationName+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299A8D827B04EB500C7993A /* NSNotificationName+Extensions.swift */; };
 		62B9B06527AC69630022C8E3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B9B06427AC69630022C8E3 /* CanvasView.swift */; };
+		62BE32FB27B6F54700D2134E /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE32FA27B6F54700D2134E /* SpeechManager.swift */; };
 		62DA4EE327A85EE50041C54D /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */; };
 		62DA4EE527A85EEE0041C54D /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */; };
 		62DA4EE727A85EF60041C54D /* Sticky-Notes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */; };
@@ -62,6 +63,7 @@
 		623EC3A127AAC008007D9937 /* DrawingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingInteractor.swift; sourceTree = "<group>"; };
 		6299A8D827B04EB500C7993A /* NSNotificationName+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotificationName+Extensions.swift"; sourceTree = "<group>"; };
 		62B9B06427AC69630022C8E3 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		62BE32FA27B6F54700D2134E /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
 		62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
 		62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sticky-Notes.ttf"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		620A5D4C27A70624004E45F9 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				62BE32F927B6F52700D2134E /* managers */,
 				62DA4ED927A85C7E0041C54D /* models */,
 				620A5D3927A6EFF8004E45F9 /* modules */,
 				62DC5EDE27AFFBAB0096E36B /* extensions */,
@@ -235,6 +238,14 @@
 				623EC39F27AABFDE007D9937 /* DrawingRouter.swift */,
 			);
 			path = drawing;
+			sourceTree = "<group>";
+		};
+		62BE32F927B6F52700D2134E /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				62BE32FA27B6F54700D2134E /* SpeechManager.swift */,
+			);
+			path = managers;
 			sourceTree = "<group>";
 		};
 		62DA4ED927A85C7E0041C54D /* models */ = {
@@ -386,6 +397,7 @@
 				620A5D5327A70B09004E45F9 /* HomeProtocols.swift in Sources */,
 				620A5D2527A6DBB5004E45F9 /* AppDelegate.swift in Sources */,
 				620A5D2727A6DBB5004E45F9 /* SceneDelegate.swift in Sources */,
+				62BE32FB27B6F54700D2134E /* SpeechManager.swift in Sources */,
 				62DC5EE027AFFBE00096E36B /* UIView+Extensions.swift in Sources */,
 				623EC39E27AABFD3007D9937 /* DrawingPresenter.swift in Sources */,
 				623EC39A27AABFA4007D9937 /* DrawingProtocols.swift in Sources */,
