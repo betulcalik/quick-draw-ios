@@ -94,7 +94,7 @@ class DrawingViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-    
+
     // MARK: - Setup UI
     private func setupUI() {
         view.backgroundColor = Colors.yellow
@@ -104,6 +104,10 @@ class DrawingViewController: UIViewController {
         addLabelsToStackView()
         addButtonsToStackView()
         addComponentsToContentStackView()
+    }
+    
+    private func updateUI() {
+        guessLabel.text = presenter?.getPrediction()
     }
     
     private func setObservers() {
@@ -159,6 +163,7 @@ class DrawingViewController: UIViewController {
 
     @objc func didTouchesEnded() {
         presenter?.classifyDrawing()
+        updateUI()
     }
 }
 

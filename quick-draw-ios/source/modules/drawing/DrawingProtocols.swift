@@ -17,13 +17,15 @@ protocol DrawingViewProtocol: AnyObject {
 // MARK: - Interactor
 protocol DrawingInteractorProtocol: AnyObject {
     var presenter: DrawingPresenterProtocol? { get set }
-    func classifyDrawing() -> String?
+    func classifyDrawing()
+    func getPrediction() -> String
 }
 
 // MARK: - Presenter
 protocol DrawingPresenterProtocol: AnyObject {
     func setCanvas() -> CanvasView?
     func classifyDrawing()
+    func getPrediction() -> String
     func getCategory() -> String
     func pushToHome()
 }

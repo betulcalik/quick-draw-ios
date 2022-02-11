@@ -37,6 +37,10 @@ class DrawingPresenter: DrawingPresenterProtocol {
         return category
     }
     
+    func getPrediction() -> String {
+        return interactor.getPrediction()
+    }
+    
     func pushToHome() {
         guard let view = view else { return }
         router.pushToHome(on: view)

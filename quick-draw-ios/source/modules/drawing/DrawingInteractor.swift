@@ -12,6 +12,7 @@ class DrawingInteractor: DrawingInteractorProtocol {
     
     // MARK: - Variables
     var presenter: DrawingPresenterProtocol?
+    var outputLabel: String?
     private let model: DrawingModel = {
         do {
             let config = MLModelConfiguration()
@@ -21,18 +22,23 @@ class DrawingInteractor: DrawingInteractorProtocol {
         }
     }()
 
-    func classifyDrawing() -> String? {
+    func classifyDrawing() {
         let canvas = presenter?.setCanvas()
         
         guard let image = canvas?.uiImage(),
               let buffer = image.pixelBufferGray(width: 28, height: 28) else {
-            return ""
+            return
         }
         
         guard let output = try? model.prediction(drawing: buffer) else {
-            return ""
+            return
         }
 
-        return output.label
+        outputLabel = output.label
     }
+    
+    func getPrediction() -> String {
+        return outputLabel ?? ""
+    }
+
 }
