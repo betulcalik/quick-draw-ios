@@ -17,7 +17,8 @@ class DrawingViewController: UIViewController {
         label.animationType = .Anvil
         label.font = Fonts.loraRegular
         label.textAlignment = .center
-        label.setCountDownTime(minutes: 60)
+        label.timeFormat = "mm:ss"
+        label.setCountDownTime(minutes: 25)
         label.start()
         return label
     }()
@@ -100,6 +101,7 @@ class DrawingViewController: UIViewController {
         view.backgroundColor = Colors.yellow
         getCategory()
         setObservers()
+        setDelegates()
         setLargeTitle()
         addLabelsToStackView()
         addButtonsToStackView()
@@ -112,6 +114,10 @@ class DrawingViewController: UIViewController {
     
     private func setObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(didTouchesEnded), name: .didTouchesEnded, object: nil)
+    }
+    
+    private func setDelegates() {
+        countdownLabel.countdownDelegate = self
     }
     
     private func setLargeTitle() {
@@ -175,5 +181,19 @@ extension DrawingViewController: DrawingViewProtocol {
     
     func getCategory() {
         category = presenter?.getCategory()
+    }
+}
+
+// MARK: - Countdown Delegate
+extension DrawingViewController: CountdownLabelDelegate {
+    func countingAt(timeCounted: TimeInterval, timeRemaining: TimeInterval) {
+        if timeRemaining == 10 {
+            self.countdownLabel.animationType = .Pixelate
+            self.countdownLabel.textColor = .red
+        }
+    }
+    
+    func countdownFinished() {
+        presenter?.pushToHome()
     }
 }
