@@ -107,7 +107,7 @@ class DrawingViewController: UIViewController {
     }
     
     private func setObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(didTouchesMoved), name: .didTouchesMoved, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didTouchesEnded), name: .didTouchesEnded, object: nil)
     }
     
     private func setLargeTitle() {
@@ -157,7 +157,7 @@ class DrawingViewController: UIViewController {
         presenter?.pushToHome()
     }
 
-    @objc func didTouchesMoved() {
+    @objc func didTouchesEnded() {
         presenter?.classifyDrawing()
     }
 }

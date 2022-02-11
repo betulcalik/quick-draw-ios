@@ -43,7 +43,7 @@ class CanvasView: UIView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        NotificationCenter.default.post(name: .didTouchesMoved, object: nil)
+        NotificationCenter.default.post(name: .didTouchesEnded, object: nil)
     }
     
     private func updateLayoutProperties() {

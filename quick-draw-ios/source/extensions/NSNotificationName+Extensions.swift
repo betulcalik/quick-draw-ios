@@ -8,5 +8,5 @@
 import Foundation
 
 extension Notification.Name {
-    static let didTouchesMoved = Notification.Name("didTouchesMoved")
+    static let didTouchesEnded = Notification.Name("didTouchesEnded")
 }
