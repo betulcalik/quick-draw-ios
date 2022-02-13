@@ -22,7 +22,6 @@ class DrawingInteractor: DrawingInteractorProtocol {
     }()
 
     func classifyDrawing(with canvas: CanvasView) -> String {
-        debugPrint(canvas)
         let image = canvas.uiImage()
         
         guard let buffer = image.pixelBufferGray(width: 28, height: 28),
