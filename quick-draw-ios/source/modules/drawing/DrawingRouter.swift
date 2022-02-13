@@ -15,8 +15,8 @@ class DrawingRouter: DrawingRouterProtocol {
         let interactor: DrawingInteractorProtocol = DrawingInteractor()
         let presenter: DrawingPresenterProtocol = DrawingPresenter(view: view,
                                                                    interactor: interactor,
-                                                                   router: router,
-                                                                   category: category)
+                                                                   router: router)
+        presenter.category = category
         view.presenter = presenter
         interactor.presenter = presenter
         
@@ -48,10 +48,9 @@ class DrawingRouter: DrawingRouterProtocol {
     }
     
     func pushToHome(on view: DrawingViewProtocol) {
-        let homeVC = HomeRouter.build()
         guard let drawingVC = view as? DrawingViewController else { return }
-        
-        drawingVC.navigationController?.pushViewController(homeVC, animated: true)
+
+        drawingVC.navigationController?.popViewController(animated: true)
     }
     
 }

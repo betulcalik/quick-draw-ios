@@ -12,6 +12,14 @@ class CanvasView: UIView {
     // MARK: - Variables
     private var lines = [[CGPoint]]()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         

@@ -10,23 +10,19 @@ import Foundation
 // MARK: - View
 protocol DrawingViewProtocol: AnyObject {
     var presenter: DrawingPresenterProtocol? { get set }
-    func setCanvas() -> CanvasView
     func getCategory()
 }
 
 // MARK: - Interactor
 protocol DrawingInteractorProtocol: AnyObject {
     var presenter: DrawingPresenterProtocol? { get set }
-    func classifyDrawing()
-    func getPrediction() -> String
+    func classifyDrawing(with canvas: CanvasView) -> String
 }
 
 // MARK: - Presenter
 protocol DrawingPresenterProtocol: AnyObject {
-    func setCanvas() -> CanvasView?
-    func classifyDrawing()
-    func getPrediction() -> String
-    func getCategory() -> String
+    var category: String? { get set }
+    func getClassifyResult(with canvas: CanvasView) -> String
     func showSuccessPopup()
     func showErrorPopup()
     func pushToHome()

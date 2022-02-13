@@ -13,32 +13,23 @@ class DrawingPresenter: DrawingPresenterProtocol {
     weak var view: DrawingViewProtocol?
     private let interactor: DrawingInteractorProtocol
     private let router: DrawingRouterProtocol
-    private let category: String
+    var category: String?
     
     init(view: DrawingViewProtocol,
          interactor: DrawingInteractorProtocol,
-         router: DrawingRouterProtocol,
-         category: String) {
+         router: DrawingRouterProtocol) {
         self.view = view
         self.interactor = interactor
         self.router = router
-        self.category = category
-    }
-
-    func classifyDrawing() {
-        interactor.classifyDrawing()
-    }
-    
-    func setCanvas() -> CanvasView? {
-        return view?.setCanvas()
     }
 
     func getCategory() -> String {
-        return category
+        return self.category ?? ""
     }
     
-    func getPrediction() -> String {
-        return interactor.getPrediction()
+    func getClassifyResult(with canvas: CanvasView) -> String {
+        let result = interactor.classifyDrawing(with: canvas)
+        return result
     }
     
     func showSuccessPopup() {

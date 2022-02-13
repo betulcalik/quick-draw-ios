@@ -89,7 +89,6 @@ class DrawingViewController: UIViewController {
     
     // MARK: - Variables
     var presenter: DrawingPresenterProtocol?
-    private var category: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,14 +106,7 @@ class DrawingViewController: UIViewController {
         addButtonsToStackView()
         addComponentsToContentStackView()
     }
-    
-    private func updateUI() {
-        guessLabel.text = presenter?.getPrediction()
-        if guessLabel.text == category {
-            presenter?.showSuccessPopup()
-        }
-    }
-    
+
     private func setObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(didTouchesEnded), name: .didTouchesEnded, object: nil)
     }
@@ -125,7 +117,6 @@ class DrawingViewController: UIViewController {
     
     private func setLargeTitle() {
         navigationItem.setHidesBackButton(true, animated: true)
-        navigationItem.title = "Let's Draw: " + (category ?? "")
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -161,30 +152,38 @@ class DrawingViewController: UIViewController {
         ])
     }
     
-    // MARK: - Actions
-    @objc func clearButtonAction() {
+    private func clearCanvas() {
         canvasView.clearCanvas()
     }
     
+    // MARK: - Actions
+    @objc func clearButtonAction() {
+        guessLabel.text = "Waiting..."
+        clearCanvas()
+    }
+    
     @objc func nextButtonAction() {
+        clearCanvas()
         countdownLabel.pause()
         presenter?.pushToHome()
     }
 
     @objc func didTouchesEnded() {
-        presenter?.classifyDrawing()
-        updateUI()
+        let result = presenter?.getClassifyResult(with: canvasView)
+        let category = presenter?.category
+        guessLabel.text = result
+
+        if result == category {
+            presenter?.showSuccessPopup()
+        }
     }
 }
 
 // MARK : - Todo View Protocol
 extension DrawingViewController: DrawingViewProtocol {
-    func setCanvas() -> CanvasView {
-        return canvasView
-    }
-    
     func getCategory() {
-        category = presenter?.getCategory()
+        let category = presenter?.category
+        navigationItem.title = "Let's Draw: " + (category ?? "")
     }
 }
 
@@ -198,7 +197,10 @@ extension DrawingViewController: CountdownLabelDelegate {
     }
     
     func countdownFinished() {
-        if guessLabel.text != category {
+        let result = presenter?.getClassifyResult(with: canvasView)
+        let category = presenter?.category
+        
+        if result != category {
             presenter?.showErrorPopup()
         }
     }
