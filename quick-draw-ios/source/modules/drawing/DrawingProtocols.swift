@@ -27,11 +27,13 @@ protocol DrawingPresenterProtocol: AnyObject {
     func classifyDrawing()
     func getPrediction() -> String
     func getCategory() -> String
+    func showSuccessPopup()
     func pushToHome()
 }
 
 // MARK: - Router
 protocol DrawingRouterProtocol: AnyObject {
     static func build(with category: String) -> DrawingViewController
+    func showSuccessPopup(on view: DrawingViewProtocol)
     func pushToHome(on view: DrawingViewProtocol)
 }

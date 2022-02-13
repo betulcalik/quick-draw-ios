@@ -29,6 +29,8 @@
 		6299A8D927B04EB500C7993A /* NSNotificationName+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299A8D827B04EB500C7993A /* NSNotificationName+Extensions.swift */; };
 		62B9B06527AC69630022C8E3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B9B06427AC69630022C8E3 /* CanvasView.swift */; };
 		62BE32FB27B6F54700D2134E /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE32FA27B6F54700D2134E /* SpeechManager.swift */; };
+		62BE32FE27B6FDF800D2134E /* SuccessPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE32FD27B6FDF800D2134E /* SuccessPopupViewController.swift */; };
+		62BE330027B6FE3B00D2134E /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE32FF27B6FE3B00D2134E /* PopupView.swift */; };
 		62DA4EE327A85EE50041C54D /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */; };
 		62DA4EE527A85EEE0041C54D /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */; };
 		62DA4EE727A85EF60041C54D /* Sticky-Notes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */; };
@@ -64,6 +66,8 @@
 		6299A8D827B04EB500C7993A /* NSNotificationName+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotificationName+Extensions.swift"; sourceTree = "<group>"; };
 		62B9B06427AC69630022C8E3 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		62BE32FA27B6F54700D2134E /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
+		62BE32FD27B6FDF800D2134E /* SuccessPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPopupViewController.swift; sourceTree = "<group>"; };
+		62BE32FF27B6FE3B00D2134E /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		62DA4EE227A85EE50041C54D /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		62DA4EE427A85EEE0041C54D /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
 		62DA4EE627A85EF60041C54D /* Sticky-Notes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sticky-Notes.ttf"; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 			children = (
 				620A5D4E27A70664004E45F9 /* RoundedButton.swift */,
 				62B9B06427AC69630022C8E3 /* CanvasView.swift */,
+				62BE32FF27B6FE3B00D2134E /* PopupView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 		623EC39827AABF90007D9937 /* drawing */ = {
 			isa = PBXGroup;
 			children = (
+				62BE32FC27B6FDD200D2134E /* popups */,
 				623EC39927AABFA4007D9937 /* DrawingProtocols.swift */,
 				623EC39B27AABFBF007D9937 /* DrawingViewController.swift */,
 				623EC3A127AAC008007D9937 /* DrawingInteractor.swift */,
@@ -246,6 +252,14 @@
 				62BE32FA27B6F54700D2134E /* SpeechManager.swift */,
 			);
 			path = managers;
+			sourceTree = "<group>";
+		};
+		62BE32FC27B6FDD200D2134E /* popups */ = {
+			isa = PBXGroup;
+			children = (
+				62BE32FD27B6FDF800D2134E /* SuccessPopupViewController.swift */,
+			);
+			path = popups;
 			sourceTree = "<group>";
 		};
 		62DA4ED927A85C7E0041C54D /* models */ = {
@@ -384,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62BE32FE27B6FDF800D2134E /* SuccessPopupViewController.swift in Sources */,
 				623EC3A227AAC008007D9937 /* DrawingInteractor.swift in Sources */,
 				620A5D2927A6DBB5004E45F9 /* HomeViewController.swift in Sources */,
 				6299A8D927B04EB500C7993A /* NSNotificationName+Extensions.swift in Sources */,
@@ -405,6 +420,7 @@
 				62DC5EE227AFFC150096E36B /* UIImage+Extensions.swift in Sources */,
 				620A5D5B27A70B3B004E45F9 /* HomeRouter.swift in Sources */,
 				62B9B06527AC69630022C8E3 /* CanvasView.swift in Sources */,
+				62BE330027B6FE3B00D2134E /* PopupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

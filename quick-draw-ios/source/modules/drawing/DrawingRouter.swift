@@ -23,6 +23,14 @@ class DrawingRouter: DrawingRouterProtocol {
         return view
     }
     
+    func showSuccessPopup(on view: DrawingViewProtocol) {
+        let successPopup = SuccessPopupViewController()
+        guard let drawingVC = view as? DrawingViewController else { return }
+        successPopup.modalPresentationStyle = .overFullScreen
+        
+        drawingVC.navigationController?.present(successPopup, animated: true)
+    }
+    
     func pushToHome(on view: DrawingViewProtocol) {
         let homeVC = HomeRouter.build()
         guard let drawingVC = view as? DrawingViewController else { return }
