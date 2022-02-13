@@ -110,6 +110,9 @@ class DrawingViewController: UIViewController {
     
     private func updateUI() {
         guessLabel.text = presenter?.getPrediction()
+        if guessLabel.text == category {
+            presenter?.showSuccessPopup()
+        }
     }
     
     private func setObservers() {
@@ -164,6 +167,7 @@ class DrawingViewController: UIViewController {
     }
     
     @objc func nextButtonAction() {
+        countdownLabel.pause()
         presenter?.pushToHome()
     }
 
@@ -194,6 +198,8 @@ extension DrawingViewController: CountdownLabelDelegate {
     }
     
     func countdownFinished() {
-        presenter?.pushToHome()
+        if guessLabel.text != category {
+            presenter?.showErrorPopup()
+        }
     }
 }

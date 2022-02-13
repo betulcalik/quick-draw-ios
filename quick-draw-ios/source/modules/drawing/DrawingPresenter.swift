@@ -46,6 +46,11 @@ class DrawingPresenter: DrawingPresenterProtocol {
         router.showSuccessPopup(on: view)
     }
     
+    func showErrorPopup() {
+        guard let view = view else { return }
+        router.showErrorPopup(on: view)
+    }
+    
     func pushToHome() {
         guard let view = view else { return }
         router.pushToHome(on: view)

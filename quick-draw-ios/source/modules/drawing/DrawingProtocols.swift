@@ -28,6 +28,7 @@ protocol DrawingPresenterProtocol: AnyObject {
     func getPrediction() -> String
     func getCategory() -> String
     func showSuccessPopup()
+    func showErrorPopup()
     func pushToHome()
 }
 
@@ -35,5 +36,6 @@ protocol DrawingPresenterProtocol: AnyObject {
 protocol DrawingRouterProtocol: AnyObject {
     static func build(with category: String) -> DrawingViewController
     func showSuccessPopup(on view: DrawingViewProtocol)
+    func showErrorPopup(on view: DrawingViewProtocol)
     func pushToHome(on view: DrawingViewProtocol)
 }

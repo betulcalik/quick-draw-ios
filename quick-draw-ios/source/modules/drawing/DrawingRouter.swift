@@ -29,6 +29,22 @@ class DrawingRouter: DrawingRouterProtocol {
         successPopup.modalPresentationStyle = .overFullScreen
         
         drawingVC.navigationController?.present(successPopup, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            successPopup.dismiss(animated: true)
+            self.pushToHome(on: view)
+        }
+    }
+    
+    func showErrorPopup(on view: DrawingViewProtocol) {
+        let errorPopup = ErrorPopupViewController()
+        guard let drawingVC = view as? DrawingViewController else { return }
+        errorPopup.modalPresentationStyle = .overFullScreen
+        
+        drawingVC.navigationController?.present(errorPopup, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            errorPopup.dismiss(animated: true)
+            self.pushToHome(on: view)
+        }
     }
     
     func pushToHome(on view: DrawingViewProtocol) {
