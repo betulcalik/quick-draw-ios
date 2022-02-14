@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://github.com/betulcalik/quick-draw-ios">
-    <img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/logo.png" alt="Logo" width="130" height="100">
+    <img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/logo.png" alt="Logo" width="130" height="140">
   </a>
 
   <h1 align="center"> Quick Draw iOS </h1>
@@ -27,7 +27,7 @@
 
 <!-- Turkish article -->
 <p><strong>Bitirme Tezim:
-<a href="https://github.com/betulcalik/KNN-MPSO/blob/main/reports/BetulCalik-Tez.pdf">KNN-MPSO</a></strong></p>
+<a href="https://github.com/betulcalik/KNN-MPSO/blob/main/reports/BetulCalik-Tez.pdf">Yapay Zeka Teknikleri ile El Çizimi Tanıma Uygulaması</a></strong></p>
 
 <!-- Table Of Contents -->
 
@@ -35,12 +35,28 @@
 
 ### 1. Application Interface Design
 
-<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Interface-Design.png" alt="Interface Design" width="200" height="100">
+<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Interface-Design.jpg" alt="Interface Design" width="500">
 
-### 2. Class Diagrams
+### 2. VIPER Design Pattern
 
-<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Home-Class-Diagram.jpg" alt="Home Module Class Diagram" width="200" height="100">
+VIPER design pattern is a architectural design pattern mostly used on iOS applications. VIPER design pattern focuses on clean architecture. VIPER is an acronym for View, Interactor, Presenter, Entity, Router. Each module should created with five different classes containing VIPER.
 
-<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Drawing-Class-Diagram.jpg" alt="Drawing Module Class Diagram" width="200" height="100">
+The diagram of the VIPER design pattern is given below.
 
-<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Speech-Manager.jpg" alt="Home Module Class Diagram" width="100" height="100">
+<img src="https://koenig-media.raywenderlich.com/uploads/2020/02/viper.png" alt="VIPER Design Pattern" width="500">
+
+### 3. Class Diagrams
+
+This project developed with the VIPER architectural design pattern. Project consists of two modules: <strong>the home module</strong> and <strong>the drawing module</strong>.
+
+Home module class diagram is below:
+
+<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Home-Class-Diagram.jpg" alt="Home Module Class Diagram" width="500">
+
+Drawing module class diagram is below:
+
+<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Drawing-Class-Diagram.jpg" alt="Drawing Module Class Diagram" width="500">
+
+There is also a speech manager in this project., speech manager class diagram is below:
+
+<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Speech-Manager.jpg" alt="Speech Manager" width="500">
