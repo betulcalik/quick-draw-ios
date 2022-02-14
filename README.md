@@ -57,6 +57,24 @@ Drawing module class diagram is below:
 
 <img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Drawing-Class-Diagram.jpg" alt="Drawing Module Class Diagram" width="500">
 
-There is also a speech manager in this project., speech manager class diagram is below:
+There is also a speech manager in this project, speech manager class diagram is below:
 
 <img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Speech-Manager.jpg" alt="Speech Manager" width="500">
+
+### 4. App Overview
+
+Home module:
+
+<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/home.png" alt="Home Module" height="400">
+
+Drawing module:
+
+<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/drawing.png" alt="Drawing Module" height="400">
+
+Success Popup:
+
+<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/sucess.png" alt="Success Popup" height="400">
+
+Error Popup:
+
+<img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/error.png" alt="Error Popup" height="400">
