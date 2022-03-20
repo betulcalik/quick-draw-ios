@@ -33,11 +33,19 @@
 
 ## Table Of Contents
 
-### 1. Application Interface Design
+### 1. Used Technologies
+
+1. Programmatical (without using storyboards)
+2. VIPER Architectural Design Pattern
+3. TuriCreate for training model
+4. Google Quick Draw dataset
+5. AVFoundation for speech synthesizer
+
+### 2. Application Interface Design
 
 <img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Interface-Design.jpg" alt="Interface Design" width="500">
 
-### 2. VIPER Design Pattern
+### 3. VIPER Design Pattern
 
 VIPER design pattern is a architectural design pattern mostly used on iOS applications. VIPER design pattern focuses on clean architecture. VIPER is an acronym for View, Interactor, Presenter, Entity, Router. Each module should created with five different classes containing VIPER.
 
@@ -45,7 +53,7 @@ The diagram of the VIPER design pattern is given below.
 
 <img src="https://koenig-media.raywenderlich.com/uploads/2020/02/viper.png" alt="VIPER Design Pattern" width="500">
 
-### 3. Class Diagrams
+### 4. Class Diagrams
 
 This project developed with the VIPER architectural design pattern. Project consists of two modules: <strong>the home module</strong> and <strong>the drawing module</strong>.
 
@@ -61,7 +69,7 @@ There is also a speech manager in this project, speech manager class diagram is 
 
 <img src="https://github.com/betulcalik/quick-draw-ios/blob/main/images/Speech-Manager.jpg" alt="Speech Manager" width="500">
 
-### 4. App Overview
+### 5. App Overview
 
 Home module:
 
